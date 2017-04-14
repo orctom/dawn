@@ -1,0 +1,9 @@
+<% if(page.content){ %>
+  <%- page.content %>
+<% } else { %>
+  <div class="container archive-body">
+    <div id="main">
+      <%- partial('_partial/archive', {pagination: config.archive, index: false}) %>
+    </div>
+  </div>
+<% } %>

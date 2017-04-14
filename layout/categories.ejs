@@ -1,0 +1,12 @@
+<div class="container archive-body">
+  <div class="row">
+    <div class="col-xs-3 well">
+      <div class="category-title" >
+        <h2 class="category-icon">Categories</h2>
+        <% site.categories.sort('name').each(function(item){ %>
+          <a href="<%- config.root %><%- item.path %>" title="<%= item.name %>"><%= item.name %><sup><%= item.posts.length %></sup></a>
+        <% }); %>
+      </div>
+    </div>
+  </div>
+</div>
